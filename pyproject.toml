@@ -2,6 +2,10 @@
 name = "deskbot"
 version = "0.1.0"
 description = "Drafts a preliminary desk study summary for a UK point from public data, with every claim attributed."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Thomas Hamson" }]
 requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.9",
@@ -15,6 +19,8 @@ deskbot = "deskbot.cli:main"
 dev = [
     "pytest>=8.3",
     "ruff>=0.6",
+    # Only for scripts/capture_screenshots.py: Deskbot itself prints plain text.
+    "rich>=13.7",
 ]
 
 [build-system]

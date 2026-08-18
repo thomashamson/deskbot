@@ -1,0 +1,90 @@
+<svg class="rich-terminal" viewBox="0 0 1141 294.0" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generated with Rich https://www.textualize.io -->
+    <style>
+
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Regular");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Bold");
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-3275560995-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-3275560995-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-3275560995-r1 { fill: #c5c8c6 }
+    </style>
+
+    <defs>
+    <clipPath id="terminal-3275560995-clip-terminal">
+      <rect x="0" y="0" width="1121.3999999999999" height="243.0" />
+    </clipPath>
+    <clipPath id="terminal-3275560995-line-0">
+    <rect x="0" y="1.5" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-1">
+    <rect x="0" y="25.9" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-2">
+    <rect x="0" y="50.3" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-3">
+    <rect x="0" y="74.7" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-4">
+    <rect x="0" y="99.1" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-5">
+    <rect x="0" y="123.5" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-6">
+    <rect x="0" y="147.9" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-7">
+    <rect x="0" y="172.3" width="1122.4" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3275560995-line-8">
+    <rect x="0" y="196.7" width="1122.4" height="24.65"/>
+            </clipPath>
+    </defs>
+
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1139" height="292" rx="8"/><text class="terminal-3275560995-title" fill="#c5c8c6" text-anchor="middle" x="569" y="27">deskbot&#160;&quot;SE1&#160;9GF&quot;&#160;&#160;(local&#160;model)</text>
+            <g transform="translate(26,22)">
+            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
+            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
+            <circle cx="44" cy="0" r="7" fill="#28c840"/>
+            </g>
+        
+    <g transform="translate(9, 41)" clip-path="url(#terminal-3275560995-clip-terminal)">
+    
+    <g class="terminal-3275560995-matrix">
+    <text class="terminal-3275560995-r1" x="0" y="20" textLength="256.2" clip-path="url(#terminal-3275560995-line-0)">SUGGESTED&#160;NEXT&#160;CHECKS</text><text class="terminal-3275560995-r1" x="1122.4" y="20" textLength="12.2" clip-path="url(#terminal-3275560995-line-0)">
+</text><text class="terminal-3275560995-r1" x="0" y="44.4" textLength="1073.6" clip-path="url(#terminal-3275560995-line-1)">----------------------------------------------------------------------------------------</text><text class="terminal-3275560995-r1" x="1122.4" y="44.4" textLength="12.2" clip-path="url(#terminal-3275560995-line-1)">
+</text><text class="terminal-3275560995-r1" x="0" y="68.8" textLength="1012.6" clip-path="url(#terminal-3275560995-line-2)">&#160;&#160;Generated&#160;locally&#160;by&#160;a&#160;language&#160;model.&#160;Advisory&#160;only:&#160;these&#160;are&#160;not&#160;findings,&#160;are</text><text class="terminal-3275560995-r1" x="1122.4" y="68.8" textLength="12.2" clip-path="url(#terminal-3275560995-line-2)">
+</text><text class="terminal-3275560995-r1" x="0" y="93.2" textLength="695.4" clip-path="url(#terminal-3275560995-line-3)">&#160;&#160;attributable&#160;to&#160;no&#160;dataset,&#160;and&#160;have&#160;not&#160;been&#160;verified.</text><text class="terminal-3275560995-r1" x="1122.4" y="93.2" textLength="12.2" clip-path="url(#terminal-3275560995-line-3)">
+</text><text class="terminal-3275560995-r1" x="1122.4" y="117.6" textLength="12.2" clip-path="url(#terminal-3275560995-line-4)">
+</text><text class="terminal-3275560995-r1" x="0" y="142" textLength="1012.6" clip-path="url(#terminal-3275560995-line-5)">&#160;&#160;-&#160;Commission&#160;a&#160;proximity&#160;search&#160;against&#160;the&#160;BGS&#160;linear&#160;features&#160;layer&#160;for&#160;faults.</text><text class="terminal-3275560995-r1" x="1122.4" y="142" textLength="12.2" clip-path="url(#terminal-3275560995-line-5)">
+</text><text class="terminal-3275560995-r1" x="0" y="166.4" textLength="1073.6" clip-path="url(#terminal-3275560995-line-6)">&#160;&#160;-&#160;Obtain&#160;additional&#160;LIDAR&#160;data&#160;to&#160;survey&#160;the&#160;ground&#160;within&#160;50&#160;m&#160;for&#160;potential&#160;scarping</text><text class="terminal-3275560995-r1" x="1122.4" y="166.4" textLength="12.2" clip-path="url(#terminal-3275560995-line-6)">
+</text><text class="terminal-3275560995-r1" x="0" y="190.8" textLength="231.8" clip-path="url(#terminal-3275560995-line-7)">&#160;&#160;&#160;&#160;or&#160;undulations.</text><text class="terminal-3275560995-r1" x="1122.4" y="190.8" textLength="12.2" clip-path="url(#terminal-3275560995-line-7)">
+</text><text class="terminal-3275560995-r1" x="0" y="215.2" textLength="1037" clip-path="url(#terminal-3275560995-line-8)">&#160;&#160;-&#160;Confirm&#160;flood&#160;defence&#160;status&#160;by&#160;contacting&#160;local&#160;authority&#160;or&#160;Environment&#160;Agency.</text><text class="terminal-3275560995-r1" x="1122.4" y="215.2" textLength="12.2" clip-path="url(#terminal-3275560995-line-8)">
+</text><text class="terminal-3275560995-r1" x="0" y="239.6" textLength="963.8" clip-path="url(#terminal-3275560995-line-9)">&#160;&#160;-&#160;Review&#160;historical&#160;land&#160;use&#160;and&#160;development&#160;plans&#160;for&#160;the&#160;area&#160;within&#160;260&#160;m.</text><text class="terminal-3275560995-r1" x="1122.4" y="239.6" textLength="12.2" clip-path="url(#terminal-3275560995-line-9)">
+</text>
+    </g>
+    </g>
+</svg>

@@ -13,6 +13,8 @@ deskbot "SE1 9GF" --json | jq .flood
 deskbot "SE1 9GF" --no-llm
 ```
 
+![A report for a Southwark postcode](docs/report-header.svg)
+
 ---
 
 ## The one idea
@@ -46,6 +48,12 @@ than quietly rendering an empty section that reads as reassurance. Gaps are
 collected, declared in the report header before any finding, and rendered in
 their own block. A section with nothing to say is not rendered at all — an empty
 section is exactly what looks like a clean bill of health.
+
+![The NOT ASSESSED block for a Scottish site](docs/not-assessed.svg)
+
+That is a site in Edinburgh. Geology and boreholes report normally, because BGS
+covers Great Britain. Flood and terrain become gaps that name the country and
+point at SEPA. There is no flood section — not an empty one, none.
 
 ---
 
@@ -97,6 +105,12 @@ model to advice already removes the behaviour the denylist exists to stop — th
 absence claims came from the *summarising* prompt. Containment is what earns its
 keep, rejecting an invented figure in roughly one run in three. The two controls
 catch different things, and the role restriction is doing more work than either.
+
+![The suggested next checks section](docs/suggestions.svg)
+
+Note what it suggests: commissioning the fault search the report declined to do,
+and confirming the flood defence status the caveat flags. It reads the gaps as
+work to be done, which is the whole of its job.
 
 ---
 
@@ -159,6 +173,9 @@ gaps pointing at SEPA or NRW. It does not refuse, and it does not pretend.
   `Flood Zone 3 (undefended floodplain extent)` so the qualification survives
   being quoted out of context. Southwark is Flood Zone 3 and sits behind the
   Thames Barrier.
+
+  ![The flood section, with the defences caveat](docs/flood.svg)
+
 - **Faults are never assessed.** BGS maps them as lines and a point query cannot
   reliably intersect one. Rather than report "no faults" everywhere, the report
   says it did not look.
@@ -166,6 +183,9 @@ gaps pointing at SEPA or NRW. It does not refuse, and it does not pretend.
   by 707 m, so a 250 m borehole search widens to 957 m and *restates its own
   claim* accordingly. Where widening would exceed 1 km the search is refused as
   `insufficient_location_precision` rather than answered misleadingly.
+
+  ![A 1 km grid reference widening its own search](docs/precision.svg)
+
 - **Counts are not proximity.** "1,331 records" means little; "nearest at 58 m"
   is the number that decides anything, so both are reported.
 - **Sampling is not surveying.** Terrain relief comes from eight sample points; a
@@ -181,7 +201,12 @@ uv run pytest                    # 212 tests
 uv run pytest -m "not network"   # offline subset, no outbound calls
 uv run ruff check . && uv run ruff format --check .
 python scripts/probe_sources.py  # are the sources still reachable?
+uv run python scripts/capture_screenshots.py   # regenerate the README images
+uv run python scripts/measure_advisor.py       # how often is the model overruled?
 ```
+
+Every image in this README is produced by running the tool against the live
+sources, never mocked up, so a capture cannot drift away from actual behaviour.
 
 Network-marked tests hit the real public endpoints. The values they assert are
 published map data rather than live readings, so they are stable.
@@ -193,7 +218,16 @@ the sources from a bare interpreter when something looks wrong.
 
 ## Licence and attribution
 
-Deskbot reproduces the attribution each source requires, in every report. The
-data is variously Open Government Licence v3 and BGS OGL-with-acknowledgement;
-the specific wording per source is in [docs/data-sources.md](docs/data-sources.md)
-and in each report's own attribution block.
+**The code is MIT** — see [LICENSE](LICENSE).
+
+**The data is not ours and carries its own terms.** MIT covers this tool, not the
+datasets it queries. Those are variously Open Government Licence v3 (postcodes.io,
+ONS, Environment Agency) and BGS OGL-with-acknowledgement, and each obliges you to
+reproduce its attribution. Deskbot does that automatically: every report ends with
+an attribution block naming each source consulted and reproducing its required
+wording verbatim.
+
+Per-source licensing, including what was deliberately **not** used, is recorded in
+[docs/data-sources.md](docs/data-sources.md). Nothing requiring an API key or a
+paid licence was worked around: BGS DiGMapGB-50 bulk data and the OS Names API
+were both dropped on those grounds rather than circumvented.
