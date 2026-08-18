@@ -60,6 +60,16 @@ def _drop_remote_fonts(target: Path) -> None:
     target.write_text(svg, encoding="utf-8")
 
 
+RULE = "=" * 88
+HEADING_NOT_ASSESSED = "NOT ASSESSED\n" + RULE
+"""Anchor on the heading *and its rule*.
+
+The words "NOT ASSESSED" also appear in the report header, in "See NOT ASSESSED
+below". Anchoring on the bare phrase silently starts the slice mid-header and
+swallows every section in between.
+"""
+
+
 def section(report: str, start: str, end: str | None = None) -> str:
     """Slice a report from one heading up to the next."""
     begin = report.index(start)
@@ -86,15 +96,24 @@ def main() -> None:
     capture(
         "report-header",
         'deskbot "SE1 9GF"',
-        section(southwark, "=" * 88, "BOREHOLE RECORDS"),
+        section(southwark, RULE, "BOREHOLE RECORDS"),
     )
 
     # The one that matters most: a Scottish site is a partial report, not a
     # refusal and not a clean bill of health.
+    #
+    # Trimmed to the two England-only gaps. The full block also carries the
+    # faults gap and a "suggestions not requested" gap, both true but making a
+    # different point, and all five together read as a wall. This is still a
+    # contiguous slice of real output rather than an assembled one: nothing is
+    # reworded, and the README caption says which gaps it shows.
+    gaps = section(edinburgh, HEADING_NOT_ASSESSED, "SOURCES AND ATTRIBUTION")
     capture(
         "not-assessed",
         'deskbot "EH1 1RE"  (Scotland)',
-        section(edinburgh, "NOT ASSESSED", "SOURCES AND ATTRIBUTION"),
+        section(gaps, HEADING_NOT_ASSESSED, "  Geology")
+        + "\n\n"
+        + section(gaps, "  Terrain", "  Suggestions"),
     )
 
     # A coarse grid reference widens the search and restates its own claim.
@@ -110,7 +129,7 @@ def main() -> None:
     capture(
         "flood",
         'deskbot "SE1 9GF"  (flood section)',
-        section(southwark, "FLOOD", "NOT ASSESSED"),
+        section(southwark, "FLOOD", HEADING_NOT_ASSESSED),
     )
 
     # The model advises and never states a fact.

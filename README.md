@@ -49,11 +49,13 @@ collected, declared in the report header before any finding, and rendered in
 their own block. A section with nothing to say is not rendered at all — an empty
 section is exactly what looks like a clean bill of health.
 
-![The NOT ASSESSED block for a Scottish site](docs/not-assessed.svg)
+![The flood and terrain gaps for a Scottish site](docs/not-assessed.svg)
 
-That is a site in Edinburgh. Geology and boreholes report normally, because BGS
-covers Great Britain. Flood and terrain become gaps that name the country and
-point at SEPA. There is no flood section — not an empty one, none.
+That is a site in Edinburgh, showing the two England-only gaps. Geology and
+boreholes report normally above it, because BGS covers Great Britain. Flood and
+terrain become gaps that name the country and point at SEPA. There is no flood
+section — not an empty one, none. The same block also carries a standing faults
+gap, trimmed from this capture and explained below.
 
 ---
 
