@@ -579,6 +579,11 @@ The 1:50,000 geology **dataset** is licensed commercially: "subject to the
 number of users, licence fee and data preparation fee", under BGS Digital Data
 Licence terms. Dropped, per the project rule.
 
+Sources: <https://www.bgs.ac.uk/datasets/bgs-geology-50k-digmapgb/> and
+<https://www.bgs.ac.uk/information-hub/licensing/>. Both checked 2026-08-18.
+BGS direct licensing enquiries to iprdigital@bgs.ac.uk; nothing here should be
+taken as a statement of their current commercial terms.
+
 This does **not** affect the 1:50k **WMS**, which is separately OGL (section 4.1).
 Worth keeping the distinction clear so nobody later assumes the whole thing is off limits.
 
