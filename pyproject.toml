@@ -1,0 +1,47 @@
+[project]
+name = "deskbot"
+version = "0.1.0"
+description = "Drafts a preliminary desk study summary for a UK point from public data, with every claim attributed."
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.9",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+deskbot = "deskbot.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/deskbot"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF", "ANN"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ANN"]
+# scripts/probe_sources.py is the session-1 reconnaissance artefact: stdlib
+# only, no project dependencies, deliberately held to different standards so it
+# can be run against a bare interpreter. It stays linted for real defects, but
+# not for style rules that would pull project conventions into it.
+"scripts/*" = ["ANN", "UP031", "UP035", "SIM105"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "network: hits real public endpoints; deselect with -m 'not network'",
+]
